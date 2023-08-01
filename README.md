@@ -3,9 +3,7 @@
 ### Governing equations
 
 Mass conservation (continuity):
-$$
-\pdv{\bm u}{t}
-$$
+$$\pdv{\bm u}{t}$$
 
 ### Schéma numérique
 
