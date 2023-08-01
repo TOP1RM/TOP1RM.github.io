@@ -31,5 +31,5 @@ $$\mathbf u^n\overline\otimes\mathbf{\nabla u}^n\simeq\mathbf u^n\overline\otime
 
 It has been observed that, at the outlet, where no specific boundary condition is defined, the back-flow phenomenon can make the simulation diverge. To avoid this, a term is added in the weak formulation so that:
 
-$$\mathbf u\overline\otimes\mathbf n=\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}=\left\lbrace\begin{array}{ll}\mathbf u\overline\otimes\mathbf n&\text{if }\mathbf u\overline\otimes\mathbf n>0\\0&\text{else}\end{array}\right.$$
+$$\mathbf u\overline\otimes\mathbf n=\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}=\left\lbrace\begin{array}{ll}\mathbf u\overline\otimes\mathbf n&\text{if }\mathbf u\overline\otimes\mathbf n>0\\ 0&\text{else}\end{array}\right.$$
 
