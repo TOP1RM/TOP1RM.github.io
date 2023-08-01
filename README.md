@@ -20,6 +20,8 @@ To relax the incompressibility constraint embodied by the mass conservation equa
 
 $$\mathbf\nabla\cdot\mathbf u+\epsilon p=0$$
 
+With $\epsilon=10^{-6}$.
+
 ### Make the problem linear
 
 The convective term of the motion equation, which introduces non-linearity in the PDE system, is approximated by a linear scheme, the Newton approximation:
@@ -31,7 +33,9 @@ $$\mathbf u^n\overline\otimes\mathbf{\nabla u}^n\simeq\mathbf u^n\overline\otime
 
 It has been observed that, at the outlet, where no specific boundary condition is defined, the back-flow phenomenon can make the simulation diverge. To avoid this, a term is added in the weak formulation so that:
 
-$$\mathbf u\overline\otimes\mathbf n=\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}=\left\lbrace\begin{array}{ll}\mathbf u\overline\otimes\mathbf n&\text{if }\mathbf u\overline\otimes\mathbf n>0\\ 0&\text{else}\end{array}\right.$$
+$$\mathbf u\overline\otimes\mathbf n=\gamma\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}=\left\lbrace\begin{array}{ll}\mathbf u\overline\otimes\mathbf n&\text{if }\mathbf u\overline\otimes\mathbf n>0\\ 0&\text{else}\end{array}\right.$$
+
+With $\gamma\in[0, 1]$.
 
 ### Boundary conditions
 
@@ -50,7 +54,9 @@ Considering everything described above, the weak formulation reads:
 
 $$\int_\Omega\mathrm{BDF}k(\mathbf u)\overline\otimes\mathbf v\mathrm dx+\int_\Omega\left(\mathbf u^n\overline\otimes\mathbf{\nabla u}^{n-1}+\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n}-\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n-1}\right)\overline\otimes\mathbf v\mathrm d x$$
 
-$$+\frac{1}{Re}\int_\Omega\nabla\mathbf u^n\overline{\overline\otimes}\mathbf{\nabla v}\mathrm d x-\int_\Omega p^n\mathbf \nabla\cdot\mathbf v\mathrm d x-\int_\Omega q\mathbf\nabla\cdot\mathbf u^n\mathrm d x-\epsilon\int_\Omega p^nq\mathrm d x=0$$
+$$+\frac{1}{Re}\int_\Omega\nabla\mathbf u^n\overline{\overline\otimes}\mathbf{\nabla v}\mathrm d x-\int_\Omega p^n\mathbf \nabla\cdot\mathbf v\mathrm d x-\int_\Omega q\mathbf\nabla\cdot\mathbf u^n\mathrm d x$$
+
+$$-\epsilon\int_\Omega p^nq\mathrm d x=0$$
 
 
 
