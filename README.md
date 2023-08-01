@@ -31,9 +31,9 @@ $$\mathbf u^n\overline\otimes\mathbf{\nabla u}^n\simeq\mathbf u^n\overline\otime
 
 ### Avoid back-flow issues
 
-It has been observed that, at the outlet, where no specific boundary condition is defined, the back-flow phenomenon can make the simulation diverge. To avoid this, a term is added in the weak formulation so that:
+It has been observed that, at the outlet, where no specific boundary condition is defined, the back-flow phenomenon can make the simulation diverge. To avoid this, a term is added in the weak formulation:
 
-$$\mathbf u\overline\otimes\mathbf n=\gamma\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}=\left\lbrace\begin{array}{ll}\mathbf u\overline\otimes\mathbf n&\text{if }\mathbf u\overline\otimes\mathbf n>0\\ 0&\text{else}\end{array}\right.$$
+$$\gamma\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}=\left\lbrace\begin{array}{ll}\mathbf u\overline\otimes\mathbf n&\text{if }\mathbf u\overline\otimes\mathbf n>0\\ 0&\text{else}\end{array}\right.$$
 
 With $\gamma\in[0, 1]$.
 
@@ -56,7 +56,7 @@ $$\int_\Omega\mathrm{BDF}k(\mathbf u)\overline\otimes\mathbf v\mathrm dx+\int_\O
 
 $$+\frac{1}{Re}\int_\Omega\nabla\mathbf u^n\overline{\overline\otimes}\mathbf{\nabla v}\mathrm d x-\int_\Omega p^n\mathbf \nabla\cdot\mathbf v\mathrm d x-\int_\Omega q\mathbf\nabla\cdot\mathbf u^n\mathrm d x$$
 
-$$-\epsilon\int_\Omega p^nq\mathrm d x=0$$
+$$-\epsilon\int_\Omega p^nq\mathrm d x+\gamma\int_{\Gamma_\text{outlet}}\gamma\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\right]\overline\otimes\mathbf v\mathfm ds=0$$
 
 
 
