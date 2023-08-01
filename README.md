@@ -33,3 +33,18 @@ It has been observed that, at the outlet, where no specific boundary condition i
 
 $$\mathbf u\overline\otimes\mathbf n=\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}=\left\lbrace\begin{array}{ll}\mathbf u\overline\otimes\mathbf n&\text{if }\mathbf u\overline\otimes\mathbf n>0\\ 0&\text{else}\end{array}\right.$$
 
+### Boundary conditions
+
+On the inlet and walls, we have a simple Dirichlet condition on velocity:
+$$\mathbf u =\mathbf e_x$$
+
+On the cylinders, the Dirichlet condition simulate each cylinder rotating on its respective axis, such that:
+$$\mathbf u = \Omega\mathbf e_\theta$$
+
+On the outlet, the boundary condition is the one described previously, but it is not specified in FEniCS as a Dirichlet boundary condition, it is directly introduced in the weak formulation.
+
+### Weak formulation
+
+
+
+
