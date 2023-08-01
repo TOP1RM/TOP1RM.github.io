@@ -14,3 +14,20 @@ We use Backward Differentiation Formula (BDF) of order 1 or 2 to approximate the
 
 $$\mathrm{BDF}_1(\mathbf u)=\frac{\mathbf u^n-\mathbf u^{n-1}} {\Delta t},\qquad\mathrm{BDF}_2(\mathbf u)=\frac{3\mathbf u^n-4\mathbf u^{n-1}+\mathbf u^{n-2}}{2\Delta t}$$
 
+### Relaxing incompressibility
+
+To relax the incompressibility constraint embodied by the mass conservation equation, we use instead:
+
+$$\mathbf\nabla\cdot\mathbf u+\epsilon p=0$$
+
+### Make the problem linear
+
+The convective term of the motion equation, which introduces non-linearity in the PDE system, is approximated by a linear scheme, the Newton approximation:
+
+$$\mathbf u^n\overline\otimes\mathbf{\nabla u}^n\simeq\mathbf u^n\overline\otimes\mathbf{\nabla u}^{n-1}+\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n}-\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n-1}$$
+
+
+### Avoid back-flow issues
+
+It has been observed that, at the outlet, where no specific boundary condition is defined, the back-flow phenomena can make the simulation diverge.
+
