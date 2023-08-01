@@ -6,7 +6,7 @@ Mass conservation (continuity):
 $$\\ \mathbf\nabla\cdot\mathbf u=0$$
 
 Motion quantity conservaton:
-$$\frac{\partial\mathbf u}{\partial t}+\mathbf u\overline\otimes\mathbf{\nabla u}=-\mathbf\nabla p+\frac{1}{Re}\mathbf\Delta\mathbf u+\mathbf f$$
+$$\frac{\partial\mathbf u}{\partial t}+\mathbf u\overline\otimes\mathbf{\nabla u}=-\mathbf\nabla p+\frac{1}{Re}\mathbf\Delta\mathbf u$$
 
 ### Temporal discretization
 
@@ -42,6 +42,12 @@ On the cylinders, the Dirichlet condition simulate each cylinder rotating on its
 $$\mathbf u = \Omega\mathbf e_\theta$$
 
 On the outlet, the boundary condition is the one described previously, but it is not specified in FEniCS as a Dirichlet boundary condition, it is directly introduced in the weak formulation.
+
+### Weak formulation
+
+Considering everything described above, the weak formulation reads:
+
+$$ \int_\Omega\mathrm{BDF}_k(\mathbf u)\overline\otimes\mathbf v\mathrm dx+\int_\Omega\left(\mathbf u^n\overline\otimes\mathbf{\nabla u}^{n-1}+\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n}-\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n-1}\right)\overline\otimes\mathbf v\mathrm d x\\ +\frac{1}{Re}\int_\Omega\nabla\mathbf u^n\overline{\overline\otimes}\mathbf{\nabla v}\mathrm d x-\int_\Omega p^n\mathbf \nabla\cdot\mathbf v\mathrm d x-\int_\Omega\mathbf f^n\overline\otimes\mathbf v\mathrm d x\qquad\textcolor{blue}{(6)}\\ -\int_\Omega q\mathbf\nabla\cdot\mathbf u^n\mathrm d x-\epsilon\int_\Omega p^nq\mathrm d x=0$$
 
 ### Weak formulation
 
