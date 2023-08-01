@@ -37,6 +37,10 @@ $$-\gamma\int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf
 
 With $\gamma\in[0, 1]$.
 
+```
+gamma * dot(Constant(0.5) * (dot(u, n) - abs(dot(u, normal))) * u), v) * ds
+```
+
 ### Boundary conditions
 
 On the inlet and walls, we have a simple Dirichlet condition on velocity:
