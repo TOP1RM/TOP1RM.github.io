@@ -49,7 +49,7 @@ On the outlet, the boundary condition is the one described previously, but it is
 
 ### Weak formulation
 
-Considering everything described above, the weak formulation reads:
+Considering everything described above, the weak formulation reads: 
 
 
 $$\int_\Omega\mathrm{BDF}k(\mathbf u)\overline\otimes\mathbf v\mathrm dx+\int_\Omega\left(\mathbf u^n\overline\otimes\mathbf{\nabla u}^{n-1}+\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n}-\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n-1}\right)\overline\otimes\mathbf v\mathrm d x$$
