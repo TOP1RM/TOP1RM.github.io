@@ -56,7 +56,7 @@ $$\int_\Omega\mathrm{BDF}k(\mathbf u)\overline\otimes\mathbf v\mathrm dx+\int_\O
 
 $$+\frac{1}{Re}\int_\Omega\nabla\mathbf u^n\overline{\overline\otimes}\mathbf{\nabla v}\mathrm d x-\int_\Omega p^n\mathbf \nabla\cdot\mathbf v\mathrm d x-\int_\Omega q\mathbf\nabla\cdot\mathbf u^n\mathrm d x$$
 
-$$-\epsilon\int_\Omega p^nq\mathrm d x+\gamma\int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\mathbb u\right]\overline\otimes\mathbf v\mathrm ds=0$$
+$$-\epsilon\int_\Omega p^nq\mathrm d x+\gamma\int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\mathbf u\right]\overline\otimes\mathbf v\mathrm ds=0$$
 
 
 
