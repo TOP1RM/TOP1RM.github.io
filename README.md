@@ -33,7 +33,7 @@ $$\mathbf u^n\overline\otimes\mathbf{\nabla u}^n\simeq\mathbf u^n\overline\otime
 
 It has been observed that, at the outlet, where no specific boundary condition is defined, the back-flow phenomenon can make the simulation diverge. To avoid this, a term is added in the weak formulation, this terms reads:
 
-$$-\gamma\int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\mathbf u\right]\overline\otimes\mathbf v\mathrm ds=-\gamma\int_{\Gamma_\text{outlet}}\left[\min(0,\mathbf u\overline\otime\mathbf n\right)\mathbf u]\overline\otimes\mathbf n\mathrm ds$$
+$$-\gamma\int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\mathbf u\right]\overline\otimes\mathbf v\mathrm ds=-\gamma\int_{\Gamma_\text{outlet}}\left[\min(0,\mathbf u\overline\otimes\mathbf n\right)\mathbf u]\overline\otimes\mathbf n\mathrm ds$$
 
 With $\gamma\in[0, 1]$.
 
