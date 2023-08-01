@@ -31,13 +31,9 @@ $$\mathbf u^n\overline\otimes\mathbf{\nabla u}^n\simeq\mathbf u^n\overline\otime
 
 ### Avoid back-flow issues
 
-It has been observed that, at the outlet, where no specific boundary condition is defined, the back-flow phenomenon can make the simulation diverge. To avoid this, a term is added in the weak formulation such that:
+It has been observed that, at the outlet, where no specific boundary condition is defined, the back-flow phenomenon can make the simulation diverge. To avoid this, a term is added in the weak formulation, this terms reads:
 
-$$\mathbf u\vert_{\Gamma_\text{outlet}}=\mathbf u - \gamma\max(0, -\mathbf u\overline\otimes\mathbf n)\mathbf n$$
-
-In the end, the term added to the weak formulation reads:
-
-$$\gamma\int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\mathbf u\right]\overline\otimes\mathbf v\mathrm ds$$
+$$-\gamma\int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\mathbf u\right]\overline\otimes\mathbf v\mathrm ds$$
 
 With $\gamma\in[0, 1]$.
 
