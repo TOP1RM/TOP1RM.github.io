@@ -50,7 +50,7 @@ Considering everything described above, the weak formulation reads:
 
 $$\int_\Omega\mathrm{BDF}k(\mathbf u)\overline\otimes\mathbf v\mathrm dx+\int_\Omega\left(\mathbf u^n\overline\otimes\mathbf{\nabla u}^{n-1}+\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n}-\mathbf u^{n-1}\overline\otimes\mathbf{\nabla u}^{n-1}\right)\overline\otimes\mathbf v\mathrm d x$$
 
-$$\frac{1}{Re}\int_\Omega\nabla\mathbf u^n\overline{\overline\otimes}\mathbf{\nabla v}\mathrm d x-\int_\Omega p^n\mathbf \nabla\cdot\mathbf v\mathrm d x-\int_\Omega q\mathbf\nabla\cdot\mathbf u^n\mathrm d x-\epsilon\int_\Omega p^nq\mathrm d x=0$$
+$$+\frac{1}{Re}\int_\Omega\nabla\mathbf u^n\overline{\overline\otimes}\mathbf{\nabla v}\mathrm d x-\int_\Omega p^n\mathbf \nabla\cdot\mathbf v\mathrm d x-\int_\Omega q\mathbf\nabla\cdot\mathbf u^n\mathrm d x-\epsilon\int_\Omega p^nq\mathrm d x=0$$
 
 
 
