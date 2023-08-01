@@ -37,7 +37,7 @@ $$\mathbf u\vert_{\Gamma_\text{outlet}}=\mathbf u - \gamma\max(0, -\mathbf u\ove
 
 In the end, the term added to the weak formulation reads:
 
-$$\\gamma int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\mathbf u\right]\overline\otimes\mathbf v\mathrm ds$$
+$$\\gamma\int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\mathbf u\right]\overline\otimes\mathbf v\mathrm ds$$
 
 With $\gamma\in[0, 1]$.
 
