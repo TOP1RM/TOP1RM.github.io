@@ -62,6 +62,8 @@ $$+\frac{1}{Re}\int_\Omega\nabla\mathbf u^n\overline{\overline\otimes}\mathbf{\n
 
 $$-\epsilon\int_\Omega p^nq\mathrm d x-\gamma\int_{\Gamma_\text{outlet}}\left[\frac{\mathbf u\overline\otimes\mathbf n-\vert\mathbf u\overline\otimes\mathbf n\vert}{2}\mathbf u\right]\overline\otimes\mathbf v\mathrm ds=0$$
 
+with $k=1 for n=1$ and $k=2$ for $n\geqslant2$.
+
 
 
 
