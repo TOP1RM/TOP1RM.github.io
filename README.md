@@ -46,7 +46,7 @@ gamma * dot(Constant(0.5) * (dot(u, n) - abs(dot(u, normal))) * u), v) * ds
 On the inlet and walls, we have a simple Dirichlet condition on velocity:
 $$\mathbf u =\mathbf e_x$$
 
-On the cylinders, the Dirichlet condition simulate each cylinder rotating on its respective axis, such that:
+On the cylinders, the Dirichlet condition simulate each cylinder rotating on its respective axis, assuming a no-slip condition:
 $$\mathbf u = \Omega\mathbf e_\theta$$
 
 On the outlet, the boundary condition is the one described previously, but it is not specified in FEniCS as a Dirichlet boundary condition, it is directly introduced in the weak formulation.
